@@ -1,21 +1,8 @@
-<?php
-/**
- * Copyright 2012, Zubin Khavarian (http://zubink.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2012, Zubin Khavarian (http://zubink.com)
- * @link http://zubink.com
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-?>
+<h1><?php echo $title_for_layout; ?></h1>
 
 <?php echo $this->element('navigation'); ?>
 
-<h2>Picklist - View</h2>
-
-<table>
+<table class="vertical-label-tb">
     <tbody>
         <tr>
             <td>
@@ -65,63 +52,57 @@
        title="Add new picklist option to this picklist">Add picklist option</a>
 </div>
 
-<div style="border: 1px solid #aaa; padding: 10px;">
-    <?php if(!empty($picklist['PicklistOption'])): ?>
+<?php if(!empty($picklist['PicklistOption'])): ?>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Group</th>
 
-            <table>
-                <thead>
-                    <tr>
-                        <td>Category</td>
-                        <td>Group</td>
-                        
-                        <td>List Key</td>
-                        <td>List Value</td>
-                        
-                        <td>Active</td>
-                        <td>Actions</td>
-                    </tr>
-                </thead>
+                <th>List Key</th>
+                <th>List Value</th>
 
-                <tbody>
-                    <?php foreach($picklist['PicklistOption'] as $tempPicklistOption): ?>
-                        <tr>
-                            <td><?php echo $tempPicklistOption['category']; ?></td>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
 
-                            <td><?php echo $tempPicklistOption['group']; ?></td>
+        <tbody>
+            <?php foreach($picklist['PicklistOption'] as $tempPicklistOption): ?>
+                <tr>
+                    <td><?php echo $tempPicklistOption['category']; ?></td>
 
-                            <td>
-                                <a href="/admin/picklist_manager/picklists/edit_option/<?php echo $tempPicklistOption['id']; ?>"
-                                   title="Edit picklist option">
-                                   <?php echo $tempPicklistOption['pl_key']; ?>
-                                </a>
-                            </td>
+                    <td><?php echo $tempPicklistOption['group']; ?></td>
 
-                            <td><?php echo $tempPicklistOption['pl_value']; ?></td>
+                    <td>
+                        <a href="/admin/picklist_manager/picklists/edit_option/<?php echo $tempPicklistOption['id']; ?>"
+                            title="Edit picklist option">
+                            <?php echo $tempPicklistOption['pl_key']; ?>
+                        </a>
+                    </td>
 
-                            <td><?php echo ($tempPicklistOption['active'])? 'Yes': 'No'; ?></td>
+                    <td><?php echo $tempPicklistOption['pl_value']; ?></td>
 
-                            <td>
-                                <a href="/admin/picklist_manager/picklists/edit_option/<?php
-                                    echo $tempPicklistOption['id']; ?>"
-                                   title="Edit picklist option">Edit</a>
-                                /
-                                <a href="/admin/picklist_manager/picklists/delete_option/<?php
-                                    echo $tempPicklistOption['id']; ?>"
-                                   title="Delete picklist option"
-                                   class="delete-confirm">Delete</a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                    <td><?php echo ($tempPicklistOption['active'])? 'Yes': 'No'; ?></td>
 
-    <?php else: ?>
-        <div style="text-align: center;">
-            <h3>No picklist options created</h3>
-            <a href="/admin/picklist_manager/picklists/add_option/<?php echo $picklist['Picklist']['id']; ?>"
-               title="Add new picklist option to this picklist">Add picklist option</a>
-        </div>
-    <?php endif; ?>
-
-    <?php //debug($picklist); ?>
-</div>
+                    <td>
+                        <a href="/admin/picklist_manager/picklists/edit_option/<?php
+                            echo $tempPicklistOption['id']; ?>"
+                            title="Edit picklist option">Edit</a>
+                        /
+                        <a href="/admin/picklist_manager/picklists/delete_option/<?php
+                            echo $tempPicklistOption['id']; ?>"
+                            title="Delete picklist option"
+                            class="delete-confirm">Delete</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <div style="text-align: center;">
+        <h3>No picklist options created</h3>
+        <a href="/admin/picklist_manager/picklists/add_option/<?php echo $picklist['Picklist']['id']; ?>"
+            title="Add new picklist option to this picklist">Add picklist option</a>
+    </div>
+<?php endif; ?>

@@ -1,30 +1,18 @@
-<?php
-/**
- * Copyright 2012, Zubin Khavarian (http://zubink.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2012, Zubin Khavarian (http://zubink.com)
- * @link http://zubink.com
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-?>
+<h1><?php echo $title_for_layout; ?></h1>
 
 <?php echo $this->element('navigation'); ?>
-
-<h2>Picklist - Index</h2>
 
 <?php if(!empty($picklists)): ?>
 
     <table>
         <thead>
             <tr>
-                <td>Name</td>
-                <td>Alias</td>
-                <td>Active</td>
+                <th>Name</th>
+                <th>Alias</th>
+                <th>Active</th>
             </tr>
         </thead>
+
         <tbody>
             <?php foreach($picklists as $tempPicklist): ?>
                 <tr class="top">

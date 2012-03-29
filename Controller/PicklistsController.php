@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright 2012, Zubin Khavarian (http://zubink.com)
+ * Copyright 2012, Zubin Khavarian (https://github.com/zubinkhavarian)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright Copyright 2012, Zubin Khavarian (http://zubink.com)
+ * @copyright Copyright 2012, Zubin Khavarian (https://github.com/zubinkhavarian)
  * @link http://zubink.com
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
@@ -17,7 +17,7 @@ App::uses('AppController', 'Controller');
  *
  * @package Plugin.PicklistManager
  * @subpackage Plugin.PicklistManager.Controller
- * @author Zubin Khavarian
+ * @author Zubin Khavarian (https://github.com/zubinkhavarian)
  */
 class PicklistsController extends PicklistManagerAppController
 {
@@ -79,7 +79,7 @@ class PicklistsController extends PicklistManagerAppController
 
         }
         
-        $this->set('title_for_layout', 'Create a Picklist');
+        $this->set('title_for_layout', 'Picklist - Create new');
 
     }
 
@@ -122,7 +122,7 @@ class PicklistsController extends PicklistManagerAppController
     {
         $picklist = $this->Picklist->fetchPicklistWithOptions($picklistId);
         $this->set('picklist', $picklist);
-        $this->set('title_for_layout', 'Picklist - Edit');
+        $this->set('title_for_layout', 'Picklist - View');
     }
 
 
@@ -168,7 +168,7 @@ class PicklistsController extends PicklistManagerAppController
 
         $this->set('picklist_id', $picklistId);
 
-        $this->set('title_for_layout', 'Picklist Option - Add');
+        $this->set('title_for_layout', 'Picklist - Add new picklist option');
     }
 
 
@@ -201,7 +201,7 @@ class PicklistsController extends PicklistManagerAppController
 
         $this->set('picklist_option_id', $picklistOptionId);
 
-        $this->set('title_for_layout', 'Picklist Option - Edit');
+        $this->set('title_for_layout', 'Picklist - Edit picklist option');
     }
 
 
@@ -256,7 +256,7 @@ class PicklistsController extends PicklistManagerAppController
             //'otherOption' => false
         ));
 
-        $this->set('title_for_layout', 'Picklist Option - Test');
+        $this->set('title_for_layout', 'Picklist - Test generated picklist HTML');
 
         $this->set('picklist', $picklist);
         $this->set('picklist_grouped', $picklistGrouped);
