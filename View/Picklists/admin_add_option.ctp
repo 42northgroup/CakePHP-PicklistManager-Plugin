@@ -2,12 +2,10 @@
 
 <?php echo $this->element('navigation'); ?>
 
-<h2>Picklist - Add Picklist Option</h2>
-
 <?php
 echo $this->Form->create('PicklistOption', array(
     'url' => $this->here,
-    'class' => 'content'
+    'class'=>'responsive'
 ));
 
 echo $this->Form->input('picklist_id', array(
