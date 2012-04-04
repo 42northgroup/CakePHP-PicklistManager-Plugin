@@ -5,7 +5,7 @@
 <?php
 echo $this->Form->create('PicklistOption', array(
     'url' => $this->here,
-    'class'=>'responsive'
+    'class' => 'responsive'
 ));
 
 echo $this->Form->input('picklist_id', array(

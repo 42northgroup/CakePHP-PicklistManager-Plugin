@@ -3,10 +3,9 @@
 <?php echo $this->element('navigation'); ?>
 
 <?php
-
 echo $this->Form->create('Picklist', array(
     'url' => $this->here,
-    'class'=>'responsive'
+    'class' => 'responsive'
 ));
 
 echo $this->Form->input('alias');

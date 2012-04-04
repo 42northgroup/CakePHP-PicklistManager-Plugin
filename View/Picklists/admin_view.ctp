@@ -2,7 +2,7 @@
 
 <?php echo $this->element('navigation'); ?>
 
-<table class="vertical-label-tb">
+<table>
     <tbody>
         <tr>
             <td>

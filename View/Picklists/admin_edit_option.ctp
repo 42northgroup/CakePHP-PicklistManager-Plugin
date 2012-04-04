@@ -5,7 +5,7 @@
 <?php
 echo $this->Form->create('PicklistOption', array(
     'url' => "/admin/picklist_manager/picklists/edit_option/{$picklist_option_id}",
-    'class'=>'responsive'
+    'class' => 'responsive'
 ));
 
 echo $this->Form->input('id'); 
