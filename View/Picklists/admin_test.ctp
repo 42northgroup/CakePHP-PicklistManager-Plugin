@@ -11,9 +11,9 @@
  */
 ?>
 
-<?php echo $this->element('navigation'); ?>
+<h2><?php echo $title_for_layout; ?></h2>
 
-<h2>Picklist - Test</h2>
+<?php echo $this->element('navigation'); ?>
 
 <h3><u>Picklist Name</u>: <?php echo $picklist['Picklist']['name']; ?></h3>
 

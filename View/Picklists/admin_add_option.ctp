@@ -11,14 +11,14 @@
  */
 ?>
 
-<?php echo $this->element('navigation'); ?>
+<h2><?php echo $title_for_layout; ?></h2>
 
-<h2>Picklist - Add Picklist Option</h2>
+<?php echo $this->element('navigation'); ?>
 
 <?php
 echo $this->Form->create('PicklistOption', array(
     'url' => $this->here,
-    'class' => 'content'
+    'class' => 'responsive'
 ));
 
 echo $this->Form->input('picklist_id', array(

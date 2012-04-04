@@ -11,9 +11,9 @@
  */
 ?>
 
-<?php echo $this->element('navigation'); ?>
+<h2><?php echo $title_for_layout; ?></h2>
 
-<h2>Picklist - View</h2>
+<?php echo $this->element('navigation'); ?>
 
 <table>
     <tbody>

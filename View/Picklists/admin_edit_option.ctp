@@ -11,14 +11,14 @@
  */
 ?>
 
-<?php echo $this->element('navigation'); ?>
+<h2><?php echo $title_for_layout; ?></h2>
 
-<h2>Picklist - Edit Picklist Option</h2>
+<?php echo $this->element('navigation'); ?>
 
 <?php
 echo $this->Form->create('PicklistOption', array(
     'url' => "/admin/picklist_manager/picklists/edit_option/{$picklist_option_id}",
-    'class' => 'content'
+    'class' => 'responsive'
 ));
 
 echo $this->Form->input('id'); 
