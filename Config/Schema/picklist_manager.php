@@ -1,6 +1,8 @@
 <?php
 /**
- * Copyright 2012, Zubin Khavarian (https://github.com/zubinkhavarian)
+ * Short description for class.
+ * 
+ * Copyright 2012, Zubin Khavarian (http://zubink.com)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
@@ -8,14 +10,14 @@
  * @copyright Copyright 2012, Zubin Khavarian (https://github.com/zubinkhavarian)
  * @link http://zubink.com
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @package Plugin\PicklistManager
  */
 
 /**
  * Short description for class.
  *
- * @package		Plugins.PicklistManager
- * @subpackage	Plugins.PicklistManager.Config
- * @author Zubin Khavarian (https://github.com/zubinkhavarian)
+ * @package Plugin\PicklistManager
+ * @author Zubin Khavarian
  */
 
 class PicklistManagerSchema extends CakeSchema
@@ -51,6 +53,12 @@ class PicklistManagerSchema extends CakeSchema
 		return true;
 	}
 
+/**
+ * picklist_options schema
+ *
+ * @var array
+ * @access public
+ */
     public $picklist_options = array(
 		'id' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 36, 'key' => 'primary', 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
 		'pl_key' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 150, 'collate' => 'latin1_swedish_ci', 'comment' => 'picklist key to use in select drop-downs and to be stored with records', 'charset' => 'latin1'),
@@ -68,7 +76,13 @@ class PicklistManagerSchema extends CakeSchema
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1)),
 		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'InnoDB')
 	);
-    
+
+/**
+ * picklists schema
+ *
+ * @var array
+ * @access public
+ */
 	public $picklists = array(
 		'id' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 36, 'key' => 'primary', 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
 		'alias' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 200, 'key' => 'unique', 'collate' => 'latin1_swedish_ci', 'comment' => 'Handle to use when fetching a list', 'charset' => 'latin1'),

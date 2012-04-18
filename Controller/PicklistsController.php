@@ -29,6 +29,8 @@ class PicklistsController extends PicklistManagerAppController
     //public $helpers = array();
 
     /**
+     * Models this controller uses
+     * 
      * @var array
      * @access public
      */
@@ -37,6 +39,8 @@ class PicklistsController extends PicklistManagerAppController
 
     
     /**
+     * beforeFilter
+     * 
      * @access public
      */
     public function beforeFilter()

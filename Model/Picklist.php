@@ -1,6 +1,8 @@
 <?php
 /**
- * Copyright 2012, Zubin Khavarian (https://github.com/zubinkhavarian)
+ * Picklist model class which deals with picklist generation and fetching operations
+ * 
+ * Copyright 2012, Zubin Khavarian (http://zubink.com)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
@@ -8,6 +10,7 @@
  * @copyright Copyright 2012, Zubin Khavarian (https://github.com/zubinkhavarian)
  * @link http://zubink.com
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @package Plugin\PicklistManager
  */
 
 App::uses('AppModel', 'Model');
@@ -15,13 +18,14 @@ App::uses('AppModel', 'Model');
 /**
  * Picklist model class which deals with picklist generation and fetching operations
  *
- * @package Plugin.PicklistManager
- * @subpackage Plugin.PicklistManager.Model
- * @author Zubin Khavarian (https://github.com/zubinkhavarian)
+ * @package Plugin\PicklistManager
+ * @author Zubin Khavarian
  */
 class Picklist extends PicklistManagerAppModel
 {
     /**
+     * Model name
+     * 
      * @var string
      * @access public
      */
@@ -29,6 +33,8 @@ class Picklist extends PicklistManagerAppModel
 
     
     /**
+     * Validates data on save
+     * 
      * @var array
      * @access public
      */
@@ -36,6 +42,8 @@ class Picklist extends PicklistManagerAppModel
 
 
     /**
+     * hasMany realtionship
+     * 
      * @var array
      * @access public
      */
@@ -49,6 +57,8 @@ class Picklist extends PicklistManagerAppModel
 
 
     /**
+     * Builds virtual fields
+     * 
      * @access public
      */
     public function __construct()
@@ -203,7 +213,6 @@ class Picklist extends PicklistManagerAppModel
      * @access public
      * @param string $picklistAlias
      * @param array $options
-     * @param boolean $grouped
      * @return Picklist
      *
      * @example
